@@ -15,9 +15,9 @@ D1L  D2W  D3L  D4L             D7W   D8L
 
 What the program entails:
 -- An object-oriented design with instances of class Room. Every Room has the following data members: a room ID, a description, a left pointer, a right pointer, and a game status (keep playing, lose, or win). 
--- A linked list structure to move from one room to the next
--- A two-dimensional array that stores information that is later applied to dynamic room instances on the heap
--- Deletion of the rooms after the end of the game to prevent memory leak
+-- A linked list structure to move from one Room to the next
+-- A two-dimensional array that stores information that is later applied to dynamic Room instances on the heap
+-- Deletion of the Rooms after the end of the game to prevent memory leak
 
 Further applications:
 -- More rooms and more directions 

@@ -17,26 +17,11 @@ class Room
     description = _desc;
     gameStatus = _gameStatus;
   } 
-
-  // void printMe(Room currentRoom)
-  // { //this method should be called from within your while loop
-  //   cout << endl << "Welcome to room " << currentRoom.roomId << endl; 
-  //   // TODO : print the description string for this room on a single line 
-  //   cout << currentRoom.description << endl;
-  // } 
+ } 
 }; 
 
 int main() 
 {
-  // DONE FOR YOU (below)
-  // roomInfo is a 2D array with 13 rows and 3 columns
-  //     each row stores a description of a room that we must put into a new instance of the Room class
-  //     there are 13 rooms (one per row), each labled A1, B2, C1, C2, etc. 
-  // each room is described by 3 string values corresponding to each column of the 2D array, where:
-  //     the 1st column is the roomId string of the room
-  //     the 2nd column is the description of the room that should be printed when you enter the room
-  //     and the 3rd column is the game status that indicates if the game is over, and if so, if it was won or lost
-  
   string roomInfo[13][3] = 
 { 
     { "A1" , "You are in a dark cave with only your wits to guide you...", "keep playing" } ,
@@ -56,13 +41,9 @@ int main()
     { "D8" ,  "You have climbed into a chamber of vampire bats.  You should have listened to the cave...\n You have DIED.", "lose" } 
   };
 
-  // Create new "Room" instances on the heap.  
-  //   Store the pointer (address) for each new room in a variable called A1, B1, B2, etc. for all rooms
-
-  // The first 3 rooms are done for you below:
-  Room* A1 = new Room( roomInfo[0][0], roomInfo[0][1], roomInfo[0][2] ); // DONE: construct a new room on the heap and store its pointer in A1
-  Room* B1 = new Room( roomInfo[1][0], roomInfo[1][1], roomInfo[1][2]); // DONE: construct a new room on the heap and store its pointer in B1
-  Room* B2 = new Room( roomInfo[2][0], roomInfo[2][1], roomInfo[2][2]); // DONE: construct a new room on the heap and store its pointer in B2
+  Room* A1 = new Room( roomInfo[0][0], roomInfo[0][1], roomInfo[0][2] ); 
+  Room* B1 = new Room( roomInfo[1][0], roomInfo[1][1], roomInfo[1][2]); 
+  Room* B2 = new Room( roomInfo[2][0], roomInfo[2][1], roomInfo[2][2]); 
   Room* C1 = new Room( roomInfo[3][0], roomInfo[3][1], roomInfo[3][2]);
   Room* C2 = new Room( roomInfo[4][0], roomInfo[4][1], roomInfo[4][2]);
   Room* C3 = new Room( roomInfo[5][0], roomInfo[5][1], roomInfo[5][2]);
@@ -74,9 +55,6 @@ int main()
   Room* D7 = new Room( roomInfo[11][0], roomInfo[11][1], roomInfo[11][2]);
   Room* D8 = new Room( roomInfo[12][0], roomInfo[12][1], roomInfo[12][2]);
   
-  
-  // Connect the left and right pointers of each room to its corresponding room pointer, as shown below:
-
   A1->left = B1; 
   A1->right = B2; 
   B1->left = C1;
@@ -90,18 +68,11 @@ int main()
   C4->left = D7;
   C4->right = D8;
 
-  // TODO: create a currentRoom pointer variable and set it to nullptr
-  Room* currentRoom = nullptr;
-  
-  // TODO: set the currentRoom pointer to point to the A1 Room instance you created above.  
+  Room* currentRoom = nullptr; 
   currentRoom = A1; 
-  // TODO: print a descrption of the current room by calling its printMe() method
-  // currentRoom->printMe(currentRoom);
-  
-  // TODO: create a string variable that can be used to collect a user response
   string choice;
 
-  // TODO: create a while loop that continues as long as the current room pointer is not nullptr AND the current room game status string is "keep playing"
+  
   while (currentRoom != nullptr && currentRoom->gameStatus == "keep playing")
     {
       cout << "Welcome to room " << currentRoom->roomId << endl;
@@ -122,7 +93,6 @@ int main()
     cout << "Error: room pointer is somehow null" << endl;
   else
   {
-   // currentRoom->printMe(currentRoom);
    if (currentRoom->gameStatus == "win")
    {
      cout << currentRoom->description << endl;

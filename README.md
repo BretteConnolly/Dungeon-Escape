@@ -21,3 +21,22 @@ What the program entails:
 
 Further applications:
 -- More rooms and more directions 
+
+Sample output:
+Welcome to room A1
+You are in a dark cave with only your wits to guide you...
+Left or right? left
+
+Welcome to room B1
+You are standing in a shallow stream with glowing eels circling your heels. 
+ A breeze is coming from the left, but it smells horrible...
+Left or right? left
+
+Welcome to room C1
+The ceiling here glows near the right exit.  It is beautiful, but something in the right tunnel is moving. CLOSER...
+Left or right? left
+
+You see an opening. A possible escape?? Nooooo - the floor falls away into a dark abyss. 
+ As your foot loses its grip, you wonder..should I perhaps have turned right?...
+Sorry, you lost.
+Goodbye 
